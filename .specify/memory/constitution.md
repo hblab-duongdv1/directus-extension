@@ -1,50 +1,74 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: N/A → 1.0.0 (initial constitution)
+- Modified principles: N/A (new document)
+- Added sections: All sections (initial creation)
+- Removed sections: N/A
+- Templates requiring updates:
+  ✅ plan-template.md - Constitution Check section references this file
+  ✅ spec-template.md - No direct references, but principles apply to all specs
+  ✅ tasks-template.md - No direct references, but principles apply to all tasks
+  ⚠ pending - No command templates found, will verify if created later
+- Follow-up TODOs: None
+-->
 
-## Core Principles
+# Project Constitution
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+**Version:** 1.0.0  
+**Ratified:** 2025-12-31  
+**Last Amended:** 2025-12-31
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+## Purpose
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+This constitution defines the non-negotiable principles and governance rules for the Directus Extension project. All development decisions, code reviews, and architectural choices must align with these principles.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+## Principles
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Simplicity First
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+All extensions MUST prioritize working, functional code over complex incomplete features. Simple solutions that solve real problems are preferred over elaborate architectures that remain unfinished. Every feature MUST be independently testable and deliverable as a minimum viable product (MVP).
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+**Rationale:** The assignment explicitly states "Simple + working + well-documented beats complex + incomplete." Time constraints (3 hours) require focused, achievable scope. Working code demonstrates problem-solving ability more effectively than ambitious but incomplete solutions.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+### Documentation Excellence
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+Every extension MUST include a comprehensive README.md with: (1) a clear one-paragraph description of what the extension does, (2) explanation of why it's useful, (3) step-by-step installation instructions, (4) usage examples, and (5) screenshots where applicable. Documentation MUST be written for someone unfamiliar with the extension.
+
+**Rationale:** Clear communication is an explicit evaluation criterion. The README is the primary interface for reviewers and potential users. Well-documented extensions demonstrate communication skills and make the extension actually usable.
+
+### Time Management Discipline
+
+All development work MUST respect the 3-hour maximum time limit. Planning phases MUST allocate time for: research (if needed), implementation, testing, documentation, and GitHub repository setup. If scope exceeds available time, features MUST be prioritized and lower-priority items deferred or removed.
+
+**Rationale:** Time constraints are non-negotiable (3 hours max). Effective time management demonstrates planning and prioritization skills. Completing a smaller scope well is preferable to starting many features incompletely.
+
+### Extension Standards Compliance
+
+All code MUST follow Directus extension best practices for the chosen extension type (API: Hooks/Endpoints/Operations, or Frontend: Interfaces/Displays/Layouts/Panels/Modules). Extensions MUST run successfully in a Directus instance without breaking existing functionality. Code MUST reference official Directus documentation and follow established patterns.
+
+**Rationale:** Extensions must integrate properly with Directus. Following official patterns ensures compatibility, maintainability, and demonstrates ability to learn and apply unfamiliar technology quickly—a key evaluation criterion.
+
+### Public Repository Standards
+
+The extension MUST be hosted in a public GitHub repository with a working link. Repository structure MUST be clear and organized. Code MUST be committed with meaningful commit messages. The repository MUST be accessible and cloneable by reviewers.
+
+**Rationale:** Public GitHub repository with link is a mandatory submission requirement. Clean repository structure and commit history demonstrate professionalism and make the code review process efficient.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+### Amendment Procedure
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+Constitution amendments require: (1) identification of the principle or governance rule to modify, (2) justification for the change, (3) update to this document with version increment per versioning policy, (4) propagation of changes to dependent templates and documentation, and (5) update of the Sync Impact Report at the top of this file.
+
+### Versioning Policy
+
+Version numbers follow semantic versioning (MAJOR.MINOR.PATCH):
+- **MAJOR**: Backward incompatible changes to principles or governance (e.g., removing a principle, fundamentally changing amendment procedure)
+- **MINOR**: Addition of new principles or significant expansion of existing principles
+- **PATCH**: Clarifications, wording improvements, typo fixes, or non-semantic refinements that don't change meaning
+
+Version changes MUST be documented in the Sync Impact Report at the top of this file.
+
+### Compliance Review
+
+Before finalizing any feature implementation, all work MUST be validated against this constitution. The Constitution Check section in implementation plans MUST be completed and pass before proceeding. Any violations MUST be explicitly justified in the Complexity Tracking section of the plan, or the work MUST be adjusted to comply.

@@ -1,0 +1,30 @@
+{
+  "name": "directus-extension-auto-slug",
+  "version": "1.0.0",
+  "description": "Directus hook extension that automatically generates URL-friendly slugs from title/name fields",
+  "type": "module",
+  "directus:extension": {
+    "type": "hook",
+    "path": "dist/index.js",
+    "source": "src/index.ts",
+    "host": "^10.0.0"
+  },
+  "scripts": {
+    "build": "directus-extension build"
+  },
+  "keywords": [
+    "directus",
+    "directus-extension",
+    "directus-custom-hook",
+    "slug",
+    "auto-slug"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@directus/extensions-sdk": "^10.0.0",
+    "@directus/types": "^10.0.0",
+    "typescript": "^5.0.0"
+  }
+}
+
